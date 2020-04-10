@@ -15,11 +15,11 @@ public class PartidoEntity {
     private int codigoPartido;
 
     @JoinColumn(name = "equipo1")
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private EquipoEntity equipo1;
 
     @JoinColumn(name = "equipo2")
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private EquipoEntity equipo2;
 
     @Column(name = "golesEquipo1")
