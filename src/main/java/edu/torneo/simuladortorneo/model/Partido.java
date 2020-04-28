@@ -6,6 +6,8 @@ import edu.torneo.simuladortorneo.model.util.Validator;
 public class Partido {
 
     public final static String GOLES_NEGATIVOS = "El equipo no puede tener goles negativos";
+    public static final String EQUIPO1_GANADOR = "el ganador es el equipo 1";
+    public static final String EQUIPO2_GANADOR = "el ganador es el equipo 2";
 
     private int codigopartido;
     private Equipo equipo1;
@@ -19,6 +21,7 @@ public class Partido {
     }
 
     public static class PartidoBuilder{
+
         private int codigopartido;
         private Equipo equipo1;
         private Equipo equipo2;
@@ -65,6 +68,8 @@ public class Partido {
             partido.golesEquipo1 = this.golesEquipo1;
             Validator.validarGolesNegativos(golesEquipo2, GOLES_NEGATIVOS);
             partido.golesEquipo2 = this.golesEquipo2;
+            Validator.equipo1Ganador(golesEquipo1,golesEquipo2,resultado,EQUIPO1_GANADOR);
+            Validator.equipo2Ganador(golesEquipo1,golesEquipo2,resultado,EQUIPO2_GANADOR);
             partido.resultado = this.resultado;
             return partido;
         }

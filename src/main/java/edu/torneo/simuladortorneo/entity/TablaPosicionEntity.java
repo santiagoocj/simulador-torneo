@@ -10,8 +10,8 @@ import java.util.List;
 @Table(name="TablaPosicion")
 public class TablaPosicionEntity {
     @Id
-    @Column (name="TablaPosicion")
-    private int codigoTablaPosicion;
+    @Column (name="numeroEquipos")
+    private int numeroEquipos;
 
     @JoinColumn(name = "equipos")
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
