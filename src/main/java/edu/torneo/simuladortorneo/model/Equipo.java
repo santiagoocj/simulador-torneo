@@ -13,7 +13,7 @@ public class Equipo {
 
     private int codigoEquipo;
     private String nombreEquipo;
-    private Image logo;
+    //private Image logo;
     private int numeroJugadores;
     private int partidosJugados;
     private int partidosGanados;
@@ -33,7 +33,7 @@ public class Equipo {
 
         private int codigoEquipo;
         private String nombreEquipo;
-        private Image logo;
+        //private Image logo;
         private int numeroJugadores;
         private int partidosJugados;
         private int partidosGanados;
@@ -54,10 +54,10 @@ public class Equipo {
             return this;
         }
 
-        public EquipoBuilder setLogo(Image logo) {
+        /*public EquipoBuilder setLogo(Image logo) {
             this.logo = logo;
             return this;
-        }
+        }*/
 
         public EquipoBuilder setNumeroJugadores(int numeroJugadores) {
             this.numeroJugadores = numeroJugadores;
@@ -109,7 +109,7 @@ public class Equipo {
             equipo.codigoEquipo = this.codigoEquipo;
             Validator.validarNombreNulo(nombreEquipo, NOMBRE_EQUIPO_REQUERIDO);
             equipo.nombreEquipo = this.nombreEquipo;
-            equipo.logo = this.logo;
+            //equipo.logo = this.logo;
             Validator.ValidarNumeroMinimoDeJugadores(numeroJugadores, NUMERO_MINIMO_DE_JUGADORES);
             Validator.validarNumeroMaximoDeJugadores(numeroJugadores,NUMERO_MAXIMO_DE_JUGADORES);
             equipo.numeroJugadores = this.numeroJugadores;

@@ -13,7 +13,7 @@ public class EquipoCommand {
 
     private int codigoEquipo;
     private String nombreEquipo;
-    private Image logo;
+    //private Image logo;
     private int numeroJugadores;
     private int partidosJugados;
     private int partidosGanados;
